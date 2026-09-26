@@ -1,0 +1,29 @@
+### Health
+GET http://localhost:4070/health
+
+### Products
+GET http://localhost:4070/products
+
+POST http://localhost:4070/products
+Content-Type: application/json
+
+{
+  "sku": "KB-99",
+  "name": "Teclado pro",
+  "category": "periféricos",
+  "price_cents": 19990000,
+  "stock": 10
+}
+
+### Movement in
+POST http://localhost:4070/products/1/movements
+Content-Type: application/json
+
+{
+  "type": "in",
+  "qty": 5,
+  "note": "Reposición"
+}
+
+### Stats
+GET http://localhost:4070/stats
